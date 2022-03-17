@@ -1,0 +1,12 @@
+p {
+  display: block;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: hidden;
+  max-height: 18em;
+  line-height: 1.8em;
+}
+img {
+    max-width: 50%;
+    object-fit: scale-down;
+}

@@ -1,0 +1,28 @@
+<div class="main-div">
+        <mat-card class="login-card">
+        <!-- <mat-card-title>Actions Buttons</mat-card-title> -->
+        <mat-card-content>
+            <h2>Log In</h2>
+            <p>
+                <mat-form-field>
+                    <input matInput placeholder="User" [formControl]="userForm" name="user" required>
+                    <mat-error>
+                    Invalid user name
+                    </mat-error>
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field>
+                    <input matInput type="password" placeholder="Password" [formControl]="passwordForm" name="password" required>
+                    <mat-error>
+                    Invalid password
+                    </mat-error>
+                </mat-form-field>
+            </p>
+            <mat-error *ngIf = "errorAuthenticated">Error</mat-error>
+          </mat-card-content>
+        <mat-card-actions align="end">
+            <button mat-raised-button color="primary" [disabled]="!isValid" (click)="login()">Login</button>
+        </mat-card-actions>
+      </mat-card>
+</div>

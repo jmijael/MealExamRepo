@@ -1,0 +1,13 @@
+<mat-toolbar color="primary">
+    <span><h2>Meal Web</h2></span>
+    <a mat-button href="/">Home</a>
+    <a mat-button href="/Meal-list">Meal List</a>
+    <a mat-button href="/Ingredient-list">Ingredient List</a>
+    <a mat-button href="/User-data">User Data</a>
+    <span class = "menuSpacer"></span>
+     
+    <div fxLayoutAlign = "Center Center" *ngIf= "IsAuthenticated">
+        <a>{{'Hello ' + userName + '!'}}</a>
+        <a mat-button (click)="Logout()">Logout</a>
+    </div>
+</mat-toolbar>

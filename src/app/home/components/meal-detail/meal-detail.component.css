@@ -1,0 +1,13 @@
+p {
+    display: block;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    overflow: hidden;
+    line-height: 1.8em;
+  }
+  img {
+      max-width: 40%;
+      object-fit: scale-down;
+      float: left;
+      margin: 5px;
+  }

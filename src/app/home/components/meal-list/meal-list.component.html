@@ -1,0 +1,50 @@
+<div>
+    <mat-form-field appearance="fill">
+        <mat-label>Category</mat-label>
+        <mat-select [formControl]="categoryFilter" name="category">
+          <mat-option *ngFor="let item of categoryList" [value]="item.strCategory">
+            {{item.strCategory}}
+          </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Area</mat-label>
+        <mat-select [formControl]="areaFilter" name="area">
+          <mat-option *ngFor="let item of areaList" [value]="item.strArea">
+            {{item.strArea}}
+          </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Ingredient</mat-label>
+        <mat-select [formControl]="princingrFilter" name="ingredient">
+          <mat-option *ngFor="let item of princingrList" [value]="item.strIngredient">
+            {{item.strIngredient}}
+          </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click) = "Clean()">Clean</button>
+    <!-- <mat-form-field appearance="outline">
+        <mat-label>Category</mat-label>
+        <input matInput placeholder="Placeholder" value="{{data?.strCategory}}" disabled>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Area</mat-label>
+        <input matInput placeholder="Placeholder" value="{{data?.strCategory}}" disabled>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Princiapl Ingredient</mat-label>
+        <input matInput placeholder="Placeholder" value="{{data?.strCategory}}" disabled>
+    </mat-form-field> -->
+    <div fxLayout="column">
+        <mat-selection-list [multiple]="false" #mealListUI>
+            <div mat-subheader>Results</div>
+            <mat-list-option *ngFor="let item of mealResultList" (click)="ClickOption(item)">
+                    <div fxLayout="row">
+                        <img src="{{item.strMealThumb}}">
+                        <h2>{{item.strMeal}}</h2>
+                    </div>
+            </mat-list-option>
+        </mat-selection-list>
+    </div>
+</div>

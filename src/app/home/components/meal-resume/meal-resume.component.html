@@ -1,0 +1,11 @@
+<div>
+    <a (click) = "click()">
+        <h3 mat-dialog-title>{{data.strMeal}}</h3>
+        <div mat-dialog-content>
+            <div fxLayout="row">
+                <p class="max-lines">{{data.strInstructions}}</p>
+                <img src="{{data.strMealThumb}}">
+            </div>
+        </div>
+    </a>
+</div>

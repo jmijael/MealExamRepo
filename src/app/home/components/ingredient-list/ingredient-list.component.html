@@ -1,0 +1,12 @@
+<div>
+    <div fxLayout="column">
+        <mat-selection-list [multiple]="false" #ingredientListUI>
+            <div mat-subheader>Most Popular Ingredients</div>
+            <mat-list-option *ngFor="let item of ingredientList" (click)="ClickOption(item)">
+                    <div fxLayout="row">
+                        <h2>{{item.strIngredient}}</h2>
+                    </div>
+            </mat-list-option>
+        </mat-selection-list>
+    </div>
+</div>
